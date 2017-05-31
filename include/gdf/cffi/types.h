@@ -7,6 +7,7 @@ typedef enum {
     GDF_INT8,
     GDF_INT16,
     GDF_INT32,
+    GDF_INT64,
     GDF_FLOAT32,
     GDF_FLOAT64,
 } gdf_dtype;
@@ -24,3 +25,6 @@ typedef struct gdf_column_{
     gdf_size_type size;
     gdf_dtype dtype;
 } gdf_column;
+
+struct _OpaqueIpcParser;
+typedef struct _OpaqueIpcParser ipc_parser_type;
