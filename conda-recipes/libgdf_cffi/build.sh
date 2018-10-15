@@ -9,13 +9,9 @@
 
 # Cleanup local git
 git clean -xdf
-# Use CMake-based build procedure
-mkdir build
-cd build
-# configure
-cmake ..
-# build
-make -j$CPU_COUNT copy_python
+
+cd python
+ln -s ../include .
 # install
 python setup.py install --single-version-externally-managed --record=record.txt
 

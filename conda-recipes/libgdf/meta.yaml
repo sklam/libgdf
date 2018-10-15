@@ -23,8 +23,12 @@ requirements:
   # use channel:
   #   - defaults
   #   - conda-forge
+  host:
+    - boost-cpp
   build:
     - cmake
+    - gxx_linux-64 5.4.*
+    - gcc_linux-64 5.4.*
 
   run:
     - pyarrow 0.10.*

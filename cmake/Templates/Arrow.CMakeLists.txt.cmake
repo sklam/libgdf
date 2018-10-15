@@ -34,6 +34,7 @@ message(STATUS "Using Apache Arrow version: ${ARROW_VERSION}")
 set(ARROW_URL "https://github.com/apache/arrow/archive/${ARROW_VERSION}.tar.gz")
 
 set(ARROW_CMAKE_ARGS
+    -DCMAKE_TOOLCHAIN_FILE=$ENV{RECIPE_DIR}/cross-linux.cmake
     #Arrow dependencies
     -DARROW_WITH_LZ4=OFF
     -DARROW_WITH_ZSTD=OFF

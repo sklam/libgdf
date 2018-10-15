@@ -13,6 +13,6 @@ git clean -xdf
 mkdir build
 cd build
 # configure
-cmake $CMAKE_COMMON_VARIABLES ..
+cmake -j$CPU_COUNT $CMAKE_COMMON_VARIABLES ..
 # build
 make -j$CPU_COUNT install

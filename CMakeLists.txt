@@ -142,7 +142,7 @@ cuda_add_library(gdf SHARED
     #src/windowedops.cu
     src/quantiles.cu
     src/io/csv/csv-reader.cu
-    src/io/convert/gdf-to-csr.cu      
+    src/io/convert/gdf-to-csr.cu
     src/validops.cu
     src/nvtx_utils.cpp
 )
@@ -200,12 +200,12 @@ set_package_properties(GTest PROPERTIES TYPE OPTIONAL
     PURPOSE "Google C++ Testing Framework (Google Test)."
     URL "https://github.com/google/googletest")
 
-if(GTEST_FOUND)
-    message(STATUS "Google C++ Testing Framework (Google Test) found in ${GTEST_ROOT}")
-    include_directories(${GTEST_INCLUDE_DIRS})
-    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/tests)
-else()
-    message(AUTHOR_WARNING "Google C++ Testing Framework (Google Test) not found: automated tests are disabled.")
-endif()
+#if(GTEST_FOUND)
+#    message(STATUS "Google C++ Testing Framework (Google Test) found in ${GTEST_ROOT}")
+#    include_directories(${GTEST_INCLUDE_DIRS})
+#    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/src/tests)
+#else()
+#    message(AUTHOR_WARNING "Google C++ Testing Framework (Google Test) not found: automated tests are disabled.")
+#endif()
 # Print the project summary
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
